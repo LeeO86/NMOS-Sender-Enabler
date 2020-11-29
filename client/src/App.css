@@ -1,0 +1,20 @@
+body {
+  background-color: #6c757d;
+}
+
+.reachBadge {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.table td.fit,
+.table th.fit {
+  white-space: nowrap;
+  width: 1%;
+}
+
+textarea.form-control.logsArea {
+  height: 40vh;
+  font-size: 80%;
+  font-weight: 400;
+}

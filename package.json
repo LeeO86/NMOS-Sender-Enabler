@@ -1,0 +1,25 @@
+{
+  "name": "nmos-sender-enabler",
+  "version": "0.0.1",
+  "description": "Activates all Senders of NMOS Devices triggered by Ember+ or WebFrontend",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon --ignore 'config.json' --ignore 'client/*' ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "nodemon --inspect --ignore 'config.json' --ignore 'client/*' ./server.js"
+  },
+  "author": "Adrian Hilber",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "is-reachable": "^5.0.0",
+    "node-emberplus": "^2.5.8",
+    "socket.io": "^3.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.2.0"
+  }
+}
