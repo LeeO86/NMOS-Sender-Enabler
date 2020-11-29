@@ -1,7 +1,6 @@
 const fs = require('fs');
 const http = require('http');
 const isReachable = require('is-reachable');
-const { resolve } = require('path');
 
 const nmosPath = '/x-nmos/connection/v1.1/single/senders/';
 const confFile = 'config.json';

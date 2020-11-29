@@ -14,7 +14,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 ENV NODE_ENV production
 COPY package*.json ./
 RUN npm ci --only=production
-COPY --from=builder /app/build ./client/build
+COPY --from=build /app/build ./client/build
 COPY . ./
 
 EXPOSE 5000
