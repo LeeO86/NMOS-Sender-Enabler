@@ -1,7 +1,7 @@
 FROM node:15-alpine as builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --only=prod
+RUN npm install
 COPY client/. ./
 RUN npm run build
 
