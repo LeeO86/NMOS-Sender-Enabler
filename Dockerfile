@@ -1,7 +1,7 @@
 FROM node:14-alpine as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
-COPY package*.json ./
+COPY client/package*.json ./
 RUN npm ci
 RUN npm install react-scripts@4.0.0 -g --silent
 COPY . ./
