@@ -3,7 +3,7 @@ const http = require('http');
 const isReachable = require('is-reachable');
 
 const nmosPath = '/x-nmos/connection/v1.1/single/senders/';
-const confFile = 'config.json';
+const confFile = 'config/config.json';
 
 const stringIsAValidUrl = (s) => {
   var protocols = ['http', 'https'];
