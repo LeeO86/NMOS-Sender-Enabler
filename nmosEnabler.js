@@ -74,8 +74,15 @@ class nmosEnabler {
   }
 
   makeRequest(url, method, data) {
+    var dataStringified = JSON.stringify(data);
+    if (!dataStringified) dataStringified = '';
     const options = {
       method: method,
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(dataStringified),
+        Accept: '*/*',
+      },
     };
     return new Promise((resolve, reject) => {
       const req = http
@@ -96,7 +103,9 @@ class nmosEnabler {
         .on('error', (e) => {
           reject(`Request to ${url} with Method ${method} failed! Error=${e}`);
         });
-      if (method != 'GET') req.write(JSON.stringify(data));
+      if (method != 'GET') {
+        req.write(dataStringified);
+      }
       req.end();
     });
   }
