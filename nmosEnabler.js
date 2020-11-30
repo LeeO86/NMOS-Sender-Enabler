@@ -129,7 +129,7 @@ class nmosEnabler {
   }
 
   async activateSender(node, sender) {
-    let url = `${node.url}${nmosPath}${sender}staged/`;
+    let url = `${node.url}${nmosPath}${sender}staged`;
     var data = await this.makeRequest(url, 'GET');
     data.master_enable = true;
     data.activation.mode = 'activate_immediate';
